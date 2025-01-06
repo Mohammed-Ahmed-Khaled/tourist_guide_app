@@ -19,18 +19,18 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Locale _locale = const Locale('en');
 
-  // void _changeLanguage(Locale locale) {
-  //   setState(() {
-  //     _locale = locale;
-  //   });
-  
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tourist Guide App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Lora',
+      theme: ThemeData(
+        fontFamily: 'Lora',
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
+        useMaterial3: true,
+        inputDecorationTheme: InputDecorationTheme(
+          errorStyle: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       locale: _locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -39,3 +39,5 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+///
