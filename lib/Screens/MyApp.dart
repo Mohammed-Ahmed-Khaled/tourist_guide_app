@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tourist_guide_app/Screens/Governments.dart';
@@ -9,6 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       title: 'Tourist Guide App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme
         ),
       ),
-      home: Governments(title: 'Governments'),
+      home: Governments(),
     );
   }
 }

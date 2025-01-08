@@ -53,7 +53,32 @@ class _GovernmentdetailsState extends State<Governmentdetails> {
               ),
             ),
           ),
-
+          Padding(
+            padding: EdgeInsets.all(8),
+            child: ListView.builder(
+              shrinkWrap: true,
+                itemCount: widget.government["landmarks"].length,
+              itemBuilder: (context, index) {
+                var landmark = widget.government["landmarks"][index];
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        landmark['landmarkName'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 21
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Image.network(landmark['landmarkImage'],
+                        // width: MediaQuery.of(context).size.width * 0.8,
+                      )
+                    ],
+                  );
+              }
+            )
+          )
 
         ]
       ),
