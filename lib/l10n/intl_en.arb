@@ -1,0 +1,19 @@
+{
+    "fullName" : "Full Name" ,
+    "Email" : "Email" ,
+    "Password" : "Password" ,
+    "ConfirmPassword" : "Confirm Password" ,
+    "Phone" : "Phone Number" ,
+    "SignUP" : "Sign UP" ,
+    "EnterName" : "Please enter your full name",
+    "EnterEmail" : "Please enter your email" ,
+    "EnterPassword" : "Please enter your password" ,
+    "EnterConfirmPassword" : "Please confirm your password" ,
+    "FirstCpital" : "First character should be a letter" ,
+    "ValidEmail" : "Please enter a valid email address" ,
+    "ValidPassword" : "Password should be at least 6 characters long",
+    "PasswordsMatch" : "Passwords do not match"
+    
+
+    
+} 
