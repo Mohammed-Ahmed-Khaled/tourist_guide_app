@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tourist_guide_app/screens/tabs_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
+import 'package:tourguid_app/Sign_up.dart';
+import 'package:tourguid_app/generated/l10n.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -39,20 +41,15 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: S.delegate.supportedLocales,
       locale: _currentLocale,
       theme: ThemeData(
-        useMaterial3: true,
-        appBarTheme: AppBarTheme(
-          centerTitle: true,
-          backgroundColor: Colors.teal,
-          titleTextStyle: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
-      home: TabsScreen(
-        toggleLanguage,
-      ),
+          fontFamily: 'Lora',
+          primaryColor: const Color.fromARGB(255, 111, 66, 50),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
+          useMaterial3: true,
+          inputDecorationTheme: InputDecorationTheme(
+            errorStyle: TextStyle(fontWeight: FontWeight.bold),
+          )),
+
+      home: SignUp(title: 'Sign Up Page'),
     );
   }
 }

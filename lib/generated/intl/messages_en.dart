@@ -22,6 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "Email": MessageLookupByLibrary.simpleMessage("Email"),
+        "EnterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Please confirm your password"),
+        "EnterEmail":
+            MessageLookupByLibrary.simpleMessage("Please enter your email"),
+        "EnterName":
+            MessageLookupByLibrary.simpleMessage("Please enter your full name"),
+        "EnterPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "FirstCpital": MessageLookupByLibrary.simpleMessage(
+            "First character should be a letter"),
+        "Password": MessageLookupByLibrary.simpleMessage("Password"),
+        "PasswordsMatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "Phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "SignUP": MessageLookupByLibrary.simpleMessage("Sign UP"),
+        "ValidEmail": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address"),
+        "ValidPassword": MessageLookupByLibrary.simpleMessage(
+            "Password should be at least 6 characters long"),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "addedToFavorites":
             MessageLookupByLibrary.simpleMessage("Added to Favorites"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),

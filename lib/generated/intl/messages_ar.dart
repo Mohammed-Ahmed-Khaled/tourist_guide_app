@@ -34,6 +34,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "removedFromFavorites":
             MessageLookupByLibrary.simpleMessage("تمت الإزالة من المفضلة"),
         "suggestedPlaces":
-            MessageLookupByLibrary.simpleMessage("الأماكن المقترحة")
+            MessageLookupByLibrary.simpleMessage("الأماكن المقترحة"),
+        "ConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "Email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "EnterConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("يرجى تأكيد كلمة المرور"),
+        "EnterEmail":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال بريدك الإلكتروني"),
+        "EnterName":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال اسمك الكامل"),
+        "EnterPassword":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال كلمة المرور"),
+        "FirstCpital": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يكون الحرف الأول حرفًا"),
+        "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "PasswordsMatch":
+            MessageLookupByLibrary.simpleMessage("كلمتا المرور غير متطابقتين"),
+        "Phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "SignUP": MessageLookupByLibrary.simpleMessage(" تسجيل دخول"),
+        "ValidEmail": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال عنوان بريد إلكتروني صالح"),
+        "ValidPassword": MessageLookupByLibrary.simpleMessage(
+            "يجب أن تكون كلمة المرور على الأقل 6 أحرف"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل")
       };
 }
