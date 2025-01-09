@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/Widgets/GovernmentCard.dart';
+import 'package:tourist_guide_app/widgets/GovernmentCard.dart';
 
 class Governmentdetails extends StatefulWidget {
   final Map<String, dynamic> government;

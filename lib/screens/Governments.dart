@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/Screens/GovernmentDetails.dart';
-import 'package:tourist_guide_app/Widgets/GovernmentCard.dart';
+import 'package:tourist_guide_app/sscreens/GovernmentDetails.dart';
+import 'package:tourist_guide_app/widgets/GovernmentCard.dart';
 import 'package:tourist_guide_app/data/governmentsData.dart';
 
 class Governments extends StatelessWidget {

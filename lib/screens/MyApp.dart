@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tourist_guide_app/Screens/Governments.dart';
+import 'package:tourist_guide_app/screens/Governments.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
