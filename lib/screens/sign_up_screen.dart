@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tourguid_app/generated/l10n.dart';
-import 'package:tourguid_app/widgets/custom_text_field.dart';
+import '../generated/l10n.dart';
+import '../widgets/custom_text_field.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

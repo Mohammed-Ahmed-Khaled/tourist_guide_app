@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tourist_guide_app/generated/l10n.dart';
-import 'package:tourist_guide_app/models/place_model.dart';
-import 'package:tourist_guide_app/providers/favorites_provider.dart';
-import 'package:tourist_guide_app/providers/nav_bar_provider.dart';
-import 'package:tourist_guide_app/screens/favorites_screen.dart';
-import 'package:tourist_guide_app/screens/places_screen.dart';
+import '../generated/l10n.dart';
+import '../models/place_model.dart';
+import '../providers/favorites_provider.dart';
+import '../providers/nav_bar_provider.dart';
+import '../screens/favorites_screen.dart';
+import '../screens/places_screen.dart';
 
 class TabsScreen extends ConsumerWidget {
   const TabsScreen(this.togglelanguage, {super.key});

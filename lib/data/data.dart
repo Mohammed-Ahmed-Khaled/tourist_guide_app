@@ -1,4 +1,4 @@
-import 'package:tourist_guide_app/models/place_model.dart';
+import '../models/place_model.dart';
 
 List<PlaceModel> suggestedplaces = [
   PlaceModel(

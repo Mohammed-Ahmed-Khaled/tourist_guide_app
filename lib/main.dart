@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tourist_guide_app/screens/tabs_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
-import 'package:tourguid_app/Sign_up.dart';
-import 'package:tourguid_app/generated/l10n.dart';
+import '../screens/sign_up_screen.dart';
+import '../generated/l10n.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));

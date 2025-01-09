@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/data/data.dart';
-import 'package:tourist_guide_app/widgets/place_card.dart';
+import '../data/data.dart';
+import '../widgets/place_card.dart';
 
 class PlacesListView extends StatelessWidget {
   const PlacesListView({super.key});

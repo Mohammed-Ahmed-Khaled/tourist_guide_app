@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/generated/l10n.dart';
-import 'package:tourist_guide_app/widgets/places_grid_view.dart';
-import 'package:tourist_guide_app/widgets/places_list_view.dart';
-import 'package:tourist_guide_app/widgets/translate.dart';
+import '../generated/l10n.dart';
+import '../widgets/places_grid_view.dart';
+import '../widgets/places_list_view.dart';
+import '../widgets/translate.dart';
 
 class PlacesScreen extends StatefulWidget {
   const PlacesScreen({super.key, required this.togglelanguage});
