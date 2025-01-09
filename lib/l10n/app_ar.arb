@@ -11,5 +11,6 @@
   "password_must_be_at_least_6_chars": "يجب أن تكون كلمة المرور على الأقل 6 أحرف.",
   "english": "الإنجليزية",
   "arabic": "العربية",
-  "invalid_email_or_password": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+  "invalid_email_or_password": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+  "login_successful": "تم تسجيل الدخول بنجاح"
 }

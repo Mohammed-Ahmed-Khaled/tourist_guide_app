@@ -11,5 +11,6 @@
   "password_must_be_at_least_6_chars": "Password must be at least 6 chars.",
   "english": "English",
   "arabic": "Arabic",
-  "invalid_email_or_password": "Invalid email or password"
+  "invalid_email_or_password": "Invalid email or password",
+  "login_successful": "Login Successful"
 }

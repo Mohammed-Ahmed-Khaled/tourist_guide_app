@@ -37,7 +37,8 @@ class _LoginFormState extends State<LoginForm> {
               keyboardType: TextInputType.emailAddress,
               prefixIcon: Icon(Icons.email,
                   size: MediaQuery.of(context).size.width * 0.07,
-                  color: Theme.of(context).primaryColor),
+                // color: Theme.of(context).primaryColor),
+              ),
               validator: (text) {
                 if (text == null ||
                     text.trim().isEmpty ||
@@ -54,7 +55,8 @@ class _LoginFormState extends State<LoginForm> {
               obscureText: widget.hidePassword,
               prefixIcon: Icon(Icons.lock,
                   size: MediaQuery.of(context).size.width * 0.07,
-                  color: Theme.of(context).primaryColor),
+                // color: Theme.of(context).primaryColor
+              ),
               suffixIcon: IconButton(
                 onPressed: widget.togglePassword,
                 icon: Icon(
@@ -62,7 +64,8 @@ class _LoginFormState extends State<LoginForm> {
                         ? Icons.visibility_off
                         : Icons.visibility,
                     size: MediaQuery.of(context).size.width * 0.06,
-                    color: Theme.of(context).primaryColor),
+                  // color: Theme.of(context).primaryColor
+                ),
               ),
               validator: (text) {
                 if (text == null || text.trim().isEmpty) {
