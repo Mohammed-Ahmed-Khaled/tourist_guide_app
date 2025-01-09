@@ -269,6 +269,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Sinai`
+  String get sinai {
+    return Intl.message(
+      'Sinai',
+      name: 'sinai',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dahab`
+  String get dahab {
+    return Intl.message(
+      'Dahab',
+      name: 'dahab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alexandria`
+  String get alexandria {
+    return Intl.message(
+      'Alexandria',
+      name: 'alexandria',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxor`
+  String get luxor {
+    return Intl.message(
+      'Luxor',
+      name: 'luxor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About`
+  String get about {
+    return Intl.message(
+      'About',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Famous Landmarks`
+  String get famous_landmarks {
+    return Intl.message(
+      'Famous Landmarks',
+      name: 'famous_landmarks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mount Sinai`
+  String get mount {
+    return Intl.message(
+      'Mount Sinai',
+      name: 'mount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saint Catherine's Monastery`
+  String get saint {
+    return Intl.message(
+      'Saint Catherine\'s Monastery',
+      name: 'saint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Sinai Peninsula in Egypt, located between Africa and Asia, is known for its beautiful landscape and long heritage. It is home to magnificent desert mountains, calm beaches, and hallowed religious locations. The area is popular for hiking, diving, and touring ancient monasteries.`
+  String get aboutSinai {
+    return Intl.message(
+      'The Sinai Peninsula in Egypt, located between Africa and Asia, is known for its beautiful landscape and long heritage. It is home to magnificent desert mountains, calm beaches, and hallowed religious locations. The area is popular for hiking, diving, and touring ancient monasteries.',
+      name: 'aboutSinai',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alexandria, Egypt’s second-largest city, is a Mediterranean gem blending history and modernity. Founded by Alexander the Great, it was once the center of knowledge and culture in the ancient world.`
+  String get aboutAlex {
+    return Intl.message(
+      'Alexandria, Egypt’s second-largest city, is a Mediterranean gem blending history and modernity. Founded by Alexander the Great, it was once the center of knowledge and culture in the ancient world.',
+      name: 'aboutAlex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxor often called the "biggest outdoor museum in the world." Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.`
+  String get aboutLuxor {
+    return Intl.message(
+      'Luxor often called the "biggest outdoor museum in the world." Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.',
+      name: 'aboutLuxor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alexandria Library: A modern revival of the ancient Library of Alexandria, it serves as a cultural hub with millions of books, art exhibits, and planetarium shows.`
+  String get alexLibrary {
+    return Intl.message(
+      'Alexandria Library: A modern revival of the ancient Library of Alexandria, it serves as a cultural hub with millions of books, art exhibits, and planetarium shows.',
+      name: 'alexLibrary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Citadel of Qaitbay: A 15th-century fortress built on the ruins of the ancient Lighthouse of Alexandria, offering stunning sea views and a glimpse into Alexandria’s defensive history.`
+  String get qaitbay {
+    return Intl.message(
+      'Citadel of Qaitbay: A 15th-century fortress built on the ruins of the ancient Lighthouse of Alexandria, offering stunning sea views and a glimpse into Alexandria’s defensive history.',
+      name: 'qaitbay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.`
+  String get mountSinai {
+    return Intl.message(
+      'Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.',
+      name: 'mountSinai',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saint Catherine's Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.`
+  String get saintCaithrine {
+    return Intl.message(
+      'Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.',
+      name: 'saintCaithrine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Karnak Temple: a magnificent complex of buildings such as temples, palaces, and obelisks celebrating the Theban gods that shows the artistic and architectural ability of the ancient Egyptians.`
+  String get karnak {
+    return Intl.message(
+      'Karnak Temple: a magnificent complex of buildings such as temples, palaces, and obelisks celebrating the Theban gods that shows the artistic and architectural ability of the ancient Egyptians.',
+      name: 'karnak',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Valley of the Kings: A royal burial site with over 60 tombs, including Tutankhamun's, adorned with intricate hieroglyphs and stunning wall paintings.`
+  String get vallleyOfKings {
+    return Intl.message(
+      'Valley of the Kings: A royal burial site with over 60 tombs, including Tutankhamun\'s, adorned with intricate hieroglyphs and stunning wall paintings.',
+      name: 'vallleyOfKings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
