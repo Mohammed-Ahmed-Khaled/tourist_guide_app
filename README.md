@@ -1,4 +1,4 @@
-# tourguid_app
+# tour_guide_app
 
 A new Flutter project.
 
