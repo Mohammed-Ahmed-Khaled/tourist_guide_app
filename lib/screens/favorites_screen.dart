@@ -1,22 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:tourist_guide_app/generated/l10n.dart';
+import 'package:tourist_guide_app/models/place_model.dart';
+import 'package:tourist_guide_app/widgets/place_card.dart';
+import 'package:tourist_guide_app/widgets/translate.dart';
 
-class FavoritesScreen extends StatefulWidget {
-  const FavoritesScreen({super.key});
+class FavoritesScreen extends StatelessWidget {
+  const FavoritesScreen({
+    super.key,
+    required this.places,
+    required this.togglelanguage,
+  });
 
-  @override
-  State<FavoritesScreen> createState() => _FavoritesScreenState();
-}
+  final List<PlaceModel> places;
+  final void Function() togglelanguage;
 
-class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Favorites'),
+        title: Text(S.of(context).favorites),
         centerTitle: true,
+        actions: [
+          TranslateButton(togglelanguage: togglelanguage),
+        ],
       ),
-      body: const Center(
-        child: Text('Favorites Screen'),
+      body: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+        itemCount: places.length,
+        itemBuilder: (ctx, index) {
+          return Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: PlaceCard(
+              place: places[index],
+            ),
+          );
+        },
       ),
     );
   }

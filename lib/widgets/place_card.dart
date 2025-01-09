@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tourist_guide_app/generated/l10n.dart';
 import 'package:tourist_guide_app/models/place_model.dart';
+import 'package:tourist_guide_app/providers/favorites_provider.dart';
 
-class PlaceCard extends StatefulWidget {
+class PlaceCard extends ConsumerWidget {
   const PlaceCard({
     super.key,
     required this.place,
@@ -10,12 +13,9 @@ class PlaceCard extends StatefulWidget {
   final PlaceModel place;
 
   @override
-  State<PlaceCard> createState() => _PlaceCardState();
-}
-
-class _PlaceCardState extends State<PlaceCard> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<PlaceModel> favoritePlaces = ref.watch(favoritePlacesProvider);
+    final bool isFavorite = favoritePlaces.contains(place);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -25,54 +25,45 @@ class _PlaceCardState extends State<PlaceCard> {
           children: [
             Expanded(
               child: Image.asset(
-                widget.place.imageUrl,
+                place.imageUrl,
                 fit: BoxFit.fitWidth,
               ),
             ),
             Text(
-              widget.place.title,
+              place.title,
               style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              widget.place.government,
+              place.government,
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
-            ), /*
+            ),
             const SizedBox(height: 10),
             IconButton(
               onPressed: () {
+                final wasAdded = ref
+                    .read(favoritePlacesProvider.notifier)
+                    .togglePlaceFavoriteStatus(place);
                 ScaffoldMessenger.of(context).clearSnackBars();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(wasAdded
-                        ? 'Added to Favorites'
-                        : 'Removed from Favorites'),
+                        ? S.of(context).addedToFavorites
+                        : S.of(context).removedFromFavorites),
                   ),
                 );
               },
-              icon: AnimatedSwitcher(
-                duration: const Duration(seconds: 1),
-                transitionBuilder: (child, animation) {
-                  return RotationTransition(
-                    turns: Tween<double>(
-                      begin: 0.8,
-                      end: 1.0,
-                    ).animate(animation),
-                    child: child,
-                  );
-                },
-                child: Icon(
-                  isFavorite ? Icons.favorite : Icons.favorite_border,
-                  color: Colors.teal,
-                  key: ValueKey(isFavorite),
-                ),
+              icon: Icon(
+                isFavorite ? Icons.favorite : Icons.favorite_border,
+                color: Colors.teal,
+                key: ValueKey(isFavorite),
               ),
-            ),*/
+            ),
           ],
         ),
       ),

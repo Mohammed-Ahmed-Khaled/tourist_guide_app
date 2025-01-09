@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tourist_guide_app/generated/l10n.dart';
 import 'package:tourist_guide_app/widgets/places_grid_view.dart';
 import 'package:tourist_guide_app/widgets/places_list_view.dart';
+import 'package:tourist_guide_app/widgets/translate.dart';
 
 class PlacesScreen extends StatefulWidget {
-  const PlacesScreen({super.key});
+  const PlacesScreen({super.key, required this.togglelanguage});
+
+  final void Function() togglelanguage;
 
   @override
   State<PlacesScreen> createState() => _PlacesScreenState();
@@ -21,17 +25,20 @@ class _PlacesScreenState extends State<PlacesScreen> {
       length: tabs.length,
       child: Scaffold(
           appBar: AppBar(
-            title: const Text('Places'),
+            title: Text(S.of(context).places),
+            actions: [
+              TranslateButton(togglelanguage: widget.togglelanguage),
+            ],
             bottom: TabBar(
               labelColor: Colors.white,
               unselectedLabelColor: Colors.black,
               indicatorColor: Colors.black,
-              tabs: const [
+              tabs: [
                 Tab(
-                  text: 'Suggested Places',
+                  text: S.of(context).suggestedPlaces,
                 ),
                 Tab(
-                  text: 'Popular Places',
+                  text: S.of(context).popularPlaces,
                 ),
               ],
             ),
