@@ -5,10 +5,10 @@ import '../widgets/GovernmentCard.dart';
 import '../data/governmentsData.dart';
 import '../widgets/translate.dart';
 
-class Governments extends StatelessWidget {
+class GovernmentsScreen extends StatelessWidget {
   final void Function() togglelanguage;
 
-  const Governments({super.key, required this.togglelanguage});
+  const GovernmentsScreen({super.key, required this.togglelanguage});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tourist_guide_app/generated/l10n.dart';
-import 'package:tourist_guide_app/models/governments_model.dart';
-import 'package:tourist_guide_app/providers/favorites_provider.dart';
+import '../generated/l10n.dart';
+import '../providers/favorites_provider.dart';
+import '../models/government_model.dart';
 
 class PlaceCard extends ConsumerWidget {
   const PlaceCard({

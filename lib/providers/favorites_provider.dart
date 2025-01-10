@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/governments_model.dart';
+import '../models/government_model.dart';
 
 class FavoriteGovernmentsNotifier extends StateNotifier<List<GovernmentModel>> {
   FavoriteGovernmentsNotifier() : super([]);

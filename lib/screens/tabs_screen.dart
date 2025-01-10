@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../generated/l10n.dart';
-import '../models/governments_model.dart';
+import '../models/government_model.dart';
 import '../providers/favorites_provider.dart';
 import '../providers/nav_bar_provider.dart';
 import '../screens/favorites_screen.dart';
-import '../screens/government_screen.dart';
 import '../screens/places_screen.dart';
+import 'Governments.dart';
 
 class TabsScreen extends ConsumerWidget {
   const TabsScreen(this.togglelanguage, {super.key});

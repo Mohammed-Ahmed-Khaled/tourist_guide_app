@@ -21,7 +21,7 @@ class LoginButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          S.of(context)!.login,
+          S.of(context).login,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,

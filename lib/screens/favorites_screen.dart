@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/generated/l10n.dart';
-import 'package:tourist_guide_app/models/governments_model.dart';
-import 'package:tourist_guide_app/widgets/place_card.dart';
-import 'package:tourist_guide_app/widgets/translate.dart';
+import '../generated/l10n.dart';
+import '../models/government_model.dart';
+import '../widgets/place_card.dart';
+import '../widgets/translate.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({
