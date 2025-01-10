@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../generated/l10n.dart';
-import '../models/place_model.dart';
-import '../providers/favorites_provider.dart';
+import 'package:tourist_guide_app/generated/l10n.dart';
+import 'package:tourist_guide_app/models/governments_model.dart';
+import 'package:tourist_guide_app/providers/favorites_provider.dart';
 
 class PlaceCard extends ConsumerWidget {
   const PlaceCard({
     super.key,
-    required this.place,
+    required this.government,
   });
 
-  final PlaceModel place;
+  final GovernmentModel government;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<PlaceModel> favoritePlaces = ref.watch(favoritePlacesProvider);
-    final bool isFavorite = favoritePlaces.contains(place);
+    final List<GovernmentModel> favoriteGovernments =
+        ref.watch(favoriteGovernmentsProvider);
+    final bool isFavorite = favoriteGovernments.contains(government);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -24,20 +25,20 @@ class PlaceCard extends ConsumerWidget {
         child: Column(
           children: [
             Expanded(
-              child: Image.asset(
-                place.imageUrl,
+              child: Image.network(
+                government.landmarkImage,
                 fit: BoxFit.fitWidth,
               ),
             ),
             Text(
-              place.title,
+              government.landmarkName,
               style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              place.government,
+              government.name,
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -47,8 +48,8 @@ class PlaceCard extends ConsumerWidget {
             IconButton(
               onPressed: () {
                 final wasAdded = ref
-                    .read(favoritePlacesProvider.notifier)
-                    .togglePlaceFavoriteStatus(place);
+                    .read(favoriteGovernmentsProvider.notifier)
+                    .toggleGovernmentFavoriteStatus(government);
                 ScaffoldMessenger.of(context).clearSnackBars();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(

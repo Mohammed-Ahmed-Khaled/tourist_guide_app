@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _currentLocale = const Locale('en', '');
+  Locale _currentLocale = const Locale('en');
 
   void toggleLanguage() {
     setState(() {
@@ -46,7 +46,6 @@ class _MyAppState extends State<MyApp> {
           inputDecorationTheme: InputDecorationTheme(
             errorStyle: TextStyle(fontWeight: FontWeight.bold),
           )),
-
       home: SignUp(title: 'Sign Up Page'),
     );
   }

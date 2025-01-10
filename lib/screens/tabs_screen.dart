@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../generated/l10n.dart';
-import '../models/place_model.dart';
+import '../models/governments_model.dart';
 import '../providers/favorites_provider.dart';
 import '../providers/nav_bar_provider.dart';
 import '../screens/favorites_screen.dart';
+import '../screens/government_screen.dart';
 import '../screens/places_screen.dart';
 
 class TabsScreen extends ConsumerWidget {
@@ -24,14 +25,14 @@ class TabsScreen extends ConsumerWidget {
           togglelanguage: togglelanguage,
         );
       } else if (selectedPageIndex == 1) {
-        final List<PlaceModel> favoritePlaces =
-            ref.watch(favoritePlacesProvider);
+        final List<GovernmentModel> favoritePlaces =
+            ref.watch(favoriteGovernmentsProvider);
         activeScreen = FavoritesScreen(
-          places: favoritePlaces,
+          governments: favoritePlaces,
           togglelanguage: togglelanguage,
         );
       } else if (selectedPageIndex == 2) {
-        activeScreen = PlacesScreen(
+        activeScreen = GovernmentsScreen(
           togglelanguage: togglelanguage,
         );
       } else {

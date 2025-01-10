@@ -1,20 +1,20 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/place_model.dart';
+import '../models/governments_model.dart';
 
-class FavoritePlacesNotifier extends StateNotifier<List<PlaceModel>> {
-  FavoritePlacesNotifier() : super([]);
-  bool togglePlaceFavoriteStatus(PlaceModel place) {
-    final isExisting = state.contains(place);
+class FavoriteGovernmentsNotifier extends StateNotifier<List<GovernmentModel>> {
+  FavoriteGovernmentsNotifier() : super([]);
+  bool toggleGovernmentFavoriteStatus(GovernmentModel government) {
+    final isExisting = state.contains(government);
     if (isExisting) {
-      state = state.where((element) => element.id != place.id).toList();
+      state = state.where((element) => element.id != government.id).toList();
       return false;
     } else {
-      state = [...state, place];
+      state = [...state, government];
       return true;
     }
   }
 }
 
-final favoritePlacesProvider =
-    StateNotifierProvider<FavoritePlacesNotifier, List<PlaceModel>>(
-        (ref) => FavoritePlacesNotifier());
+final favoriteGovernmentsProvider =
+    StateNotifierProvider<FavoriteGovernmentsNotifier, List<GovernmentModel>>(
+        (ref) => FavoriteGovernmentsNotifier());
