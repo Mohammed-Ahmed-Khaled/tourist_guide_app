@@ -1,43 +1,59 @@
-import 'package:tourist_guide_app/models/place_model.dart';
+import 'package:tourist_guide_app/models/governments_model.dart';
 
-List<PlaceModel> suggestedplaces = [
-  PlaceModel(
-    id: "1",
-    title: "Cairo",
-    imageUrl: "assets/images/meal.png",
-    government: "Cairo",
-  ),
-  PlaceModel(
-    id: "2",
-    title: "Giza",
-    imageUrl: "assets/images/meal.png",
-    government: "Giza",
-  ),
-  PlaceModel(
-    id: "3",
-    title: "Tanta",
-    imageUrl: "assets/images/meal.png",
-    government: "Gharbia",
-  ),
-];
-
-List<PlaceModel> popularplaces = [
-  PlaceModel(
-    id: "1",
-    title: "Cairo",
-    imageUrl: "assets/images/meal.png",
-    government: "Cairo",
-  ),
-  PlaceModel(
-    id: "2",
-    title: "Giza",
-    imageUrl: "assets/images/meal.png",
-    government: "Giza",
-  ),
-  PlaceModel(
-    id: "3",
-    title: "Tanta",
-    imageUrl: "assets/images/meal.png",
-    government: "Gharbia",
-  ),
+List<GovernmentModel> governments = [
+  GovernmentModel(
+      id: '1',
+      name: 'Sinai',
+      imgUrl:
+          "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      about: "about"
+          "aboutSinai",
+      landmarks: [
+        {
+          "landmarkName": "Dahab",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+          "landmarkName": "dahab",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+      ]),
+  GovernmentModel(
+      id: "2",
+      name: "Alexandria",
+      imgUrl:
+          "https://images.pexels.com/photos/25323282/pexels-photo-25323282/free-photo-of-citadel-of-qaitbay-in-alexandria-seen-from-bay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      about: "aboutAlexandria",
+      landmarks: [
+        {
+          "landmarkName": "Dahab",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+          "landmarkName": "name",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+      ]),
+  GovernmentModel(
+      id: "3",
+      name: "Luxor",
+      imgUrl:
+          "https://images.pexels.com/photos/15188091/pexels-photo-15188091/free-photo-of-hot-air-balloons-in-the-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      about: "Capital of Egypt",
+      landmarks: [
+        {
+          "landmarkName": "Dahab",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+          "landmarkName": "name",
+          "landmarkImage":
+              "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+      ]),
 ];

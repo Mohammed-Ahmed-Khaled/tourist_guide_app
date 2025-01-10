@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:tourist_guide_app/generated/l10n.dart';
-import 'package:tourist_guide_app/models/place_model.dart';
+import 'package:tourist_guide_app/models/governments_model.dart';
 import 'package:tourist_guide_app/widgets/place_card.dart';
 import 'package:tourist_guide_app/widgets/translate.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({
     super.key,
-    required this.places,
+    required this.governments,
     required this.togglelanguage,
   });
 
-  final List<PlaceModel> places;
+  final List<GovernmentModel> governments;
   final void Function() togglelanguage;
 
   @override
@@ -27,12 +27,12 @@ class FavoritesScreen extends StatelessWidget {
       body: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
-        itemCount: places.length,
+        itemCount: governments.length,
         itemBuilder: (ctx, index) {
           return Padding(
             padding: const EdgeInsets.all(5.0),
             child: PlaceCard(
-              place: places[index],
+              government: governments[index],
             ),
           );
         },

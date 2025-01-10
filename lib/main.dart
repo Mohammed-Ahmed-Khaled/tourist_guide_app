@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _currentLocale = const Locale('en', '');
+  Locale _currentLocale = const Locale('en');
 
   void toggleLanguage() {
     setState(() {
@@ -39,6 +39,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: S.delegate.supportedLocales,
       locale: _currentLocale,
       theme: ThemeData(
+        fontFamily: 'Lora',
         useMaterial3: true,
         appBarTheme: AppBarTheme(
           centerTitle: true,

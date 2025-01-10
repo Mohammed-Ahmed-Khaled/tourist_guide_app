@@ -15,12 +15,12 @@ class PlacesGridView extends StatelessWidget {
           mainAxisSpacing: 20,
           childAspectRatio: 0.9,
         ),
-        itemCount: suggestedplaces.length,
+        itemCount: governments.length,
         itemBuilder: (ctx, index) {
           return Padding(
             padding: const EdgeInsets.all(5.0),
             child: PlaceCard(
-              place: suggestedplaces[index],
+              government: governments[index],
             ),
           );
         },

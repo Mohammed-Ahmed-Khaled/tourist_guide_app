@@ -12,12 +12,12 @@ class PlacesListView extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
-        itemCount: popularplaces.length,
+        itemCount: governments.length,
         itemBuilder: (ctx, index) {
           return Padding(
             padding: const EdgeInsets.all(5.0),
             child: PlaceCard(
-              place: popularplaces[index],
+              government: governments[index],
             ),
           );
         },
