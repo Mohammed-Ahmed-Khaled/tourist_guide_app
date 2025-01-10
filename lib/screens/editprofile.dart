@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tourist_guide_app/screens/profile.dart';
 
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({super.key});
@@ -25,7 +26,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     _fullNameController.text = prefs.getString('fullName') ?? '';
     _emailController.text = prefs.getString('email') ?? '';
-    _passwordController.text = prefs.getString('phoneNumber') ?? '';
+    _passwordController.text = prefs.getString('password') ?? '';
   }
 
   //function to edit user data
@@ -33,7 +34,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('fullName', _fullNameController.text);
     await prefs.setString('email', _emailController.text);
-    await prefs.setString('phoneNumber', _passwordController.text);
+    await prefs.setString('password', _passwordController.text);
   }
 
   @override
@@ -64,7 +65,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
               ElevatedButton(
                   onPressed: () async {
                     await editUserData(); //update the user data
-                    Navigator.pop(context); //return to the profile page
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Profile()),
+                    ); //return to the profile page
                   },
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(150, 40),
