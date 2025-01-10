@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tourist_guide_app/screens/profile.dart';
+import '../screens/profile.dart';
 
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({super.key});

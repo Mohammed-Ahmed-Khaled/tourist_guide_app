@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 import '../screens/sign_up_screen.dart';
-import '../generated/l10n.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));

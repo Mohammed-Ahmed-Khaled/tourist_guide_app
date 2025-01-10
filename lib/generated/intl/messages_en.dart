@@ -22,11 +22,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "Email": MessageLookupByLibrary.simpleMessage("Email"),
+        "EnterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Please confirm your password"),
+        "EnterEmail":
+            MessageLookupByLibrary.simpleMessage("Please enter your email"),
+        "EnterName":
+            MessageLookupByLibrary.simpleMessage("Please enter your full name"),
+        "EnterPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "FirstCpital": MessageLookupByLibrary.simpleMessage(
+            "First character should be a letter"),
+        "Password": MessageLookupByLibrary.simpleMessage("Password"),
+        "PasswordsMatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "Phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "SignUP": MessageLookupByLibrary.simpleMessage("Sign UP"),
+        "ValidEmail": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid email address"),
+        "ValidPassword": MessageLookupByLibrary.simpleMessage(
+            "Password should be at least 6 characters long"),
         "about": MessageLookupByLibrary.simpleMessage("About"),
         "aboutAlex": MessageLookupByLibrary.simpleMessage(
             "Alexandria, Egypt’s second-largest city, is a Mediterranean gem blending history and modernity. Founded by Alexander the Great, it was once the center of knowledge and culture in the ancient world."),
         "aboutLuxor": MessageLookupByLibrary.simpleMessage(
-            "Luxor often called the \"biggest outdoor museum in the world.\" Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels."),
+            "Luxor often called the biggest outdoor museum in the world. Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels."),
         "aboutSinai": MessageLookupByLibrary.simpleMessage(
             "The Sinai Peninsula in Egypt, located between Africa and Asia, is known for its beautiful landscape and long heritage. It is home to magnificent desert mountains, calm beaches, and hallowed religious locations. The area is popular for hiking, diving, and touring ancient monasteries."),
         "addedToFavorites":
@@ -43,7 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "famous_landmarks":
             MessageLookupByLibrary.simpleMessage("Famous Landmarks"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
-        "governments": MessageLookupByLibrary.simpleMessage("Governments"),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "governments": MessageLookupByLibrary.simpleMessage("Government"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalid_email_or_password":
             MessageLookupByLibrary.simpleMessage("Invalid email or password"),
@@ -55,7 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "luxor": MessageLookupByLibrary.simpleMessage("Luxor"),
         "mount": MessageLookupByLibrary.simpleMessage("Mount Sinai"),
         "mountSinai": MessageLookupByLibrary.simpleMessage(
-            "Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn."),
+            "Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn."),
         "new_here": MessageLookupByLibrary.simpleMessage("New Here?"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_must_be_at_least_6_chars":
@@ -75,7 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saint": MessageLookupByLibrary.simpleMessage(
             "Saint Catherine\'s Monastery"),
         "saintCaithrine": MessageLookupByLibrary.simpleMessage(
-            "Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures."),
+            "Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures."),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "sinai": MessageLookupByLibrary.simpleMessage("Sinai"),
         "suggestedPlaces":

@@ -90,10 +90,10 @@ class S {
     );
   }
 
-  /// `Governments`
+  /// `Government`
   String get governments {
     return Intl.message(
-      'Governments',
+      'Government',
       name: 'governments',
       desc: '',
       args: [],
@@ -135,6 +135,146 @@ class S {
     return Intl.message(
       'Popular Places',
       name: 'popularPlaces',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get Email {
+    return Intl.message(
+      'Email',
+      name: 'Email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get Password {
+    return Intl.message(
+      'Password',
+      name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get ConfirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'ConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get Phone {
+    return Intl.message(
+      'Phone Number',
+      name: 'Phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign UP`
+  String get SignUP {
+    return Intl.message(
+      'Sign UP',
+      name: 'SignUP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your full name`
+  String get EnterName {
+    return Intl.message(
+      'Please enter your full name',
+      name: 'EnterName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email`
+  String get EnterEmail {
+    return Intl.message(
+      'Please enter your email',
+      name: 'EnterEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your password`
+  String get EnterPassword {
+    return Intl.message(
+      'Please enter your password',
+      name: 'EnterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please confirm your password`
+  String get EnterConfirmPassword {
+    return Intl.message(
+      'Please confirm your password',
+      name: 'EnterConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First character should be a letter`
+  String get FirstCpital {
+    return Intl.message(
+      'First character should be a letter',
+      name: 'FirstCpital',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email address`
+  String get ValidEmail {
+    return Intl.message(
+      'Please enter a valid email address',
+      name: 'ValidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password should be at least 6 characters long`
+  String get ValidPassword {
+    return Intl.message(
+      'Password should be at least 6 characters long',
+      name: 'ValidPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get PasswordsMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'PasswordsMatch',
       desc: '',
       args: [],
     );
@@ -240,10 +380,10 @@ class S {
     );
   }
 
-  /// `Luxor often called the "biggest outdoor museum in the world." Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.`
+  /// `Luxor often called the biggest outdoor museum in the world. Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.`
   String get aboutLuxor {
     return Intl.message(
-      'Luxor often called the "biggest outdoor museum in the world." Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.',
+      'Luxor often called the biggest outdoor museum in the world. Its Eastern Bank, which is split by the Nile, represents life, while the West Bank is emblematic of the afterlife. Luxor, a centre of ancient Egyptian history, provides a singular combination of cultural experiences and historical marvels.',
       name: 'aboutLuxor',
       desc: '',
       args: [],
@@ -270,20 +410,20 @@ class S {
     );
   }
 
-  /// `Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.`
+  /// `Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.`
   String get mountSinai {
     return Intl.message(
-      'Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.',
+      'Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.',
       name: 'mountSinai',
       desc: '',
       args: [],
     );
   }
 
-  /// `Saint Catherine's Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.`
+  /// `Saint Catherine's Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.`
   String get saintCaithrine {
     return Intl.message(
-      'Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.',
+      'Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.',
       name: 'saintCaithrine',
       desc: '',
       args: [],

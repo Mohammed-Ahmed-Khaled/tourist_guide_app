@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-import 'package:tourist_guide_app/screens/editprofile.dart';
-import 'package:tourist_guide_app/widgets/listtale_widget.dart';
+import '../screens/editprofile.dart';
+import '../widgets/listtale_widget.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});

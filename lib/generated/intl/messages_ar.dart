@@ -22,6 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "Email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "EnterConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("يرجى تأكيد كلمة المرور"),
+        "EnterEmail":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال بريدك الإلكتروني"),
+        "EnterName":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال اسمك الكامل"),
+        "EnterPassword":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال كلمة المرور"),
+        "FirstCpital": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يكون الحرف الأول حرفًا"),
+        "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "PasswordsMatch":
+            MessageLookupByLibrary.simpleMessage("كلمتا المرور غير متطابقتين"),
+        "Phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "SignUP": MessageLookupByLibrary.simpleMessage(" تسجيل دخول"),
+        "ValidEmail": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال عنوان بريد إلكتروني صالح"),
+        "ValidPassword": MessageLookupByLibrary.simpleMessage(
+            "يجب أن تكون كلمة المرور على الأقل 6 أحرف"),
         "about": MessageLookupByLibrary.simpleMessage("نبذة"),
         "aboutAlex": MessageLookupByLibrary.simpleMessage(
             "الإسكندرية، ثاني أكبر مدينة في مصر، تُعد جوهرة البحر الأبيض المتوسط حيث تمتزج فيها التاريخ والحداثة. تأسست على يد الإسكندر الأكبر وكانت مركزًا للمعرفة والثقافة في العالم القديم."),
@@ -43,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "famous_landmarks":
             MessageLookupByLibrary.simpleMessage("معالم مشهورة"),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "governments": MessageLookupByLibrary.simpleMessage("المحافظات"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "invalid_email_or_password": MessageLookupByLibrary.simpleMessage(
@@ -53,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_successful":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "luxor": MessageLookupByLibrary.simpleMessage("الأقصر"),
+        "mount": MessageLookupByLibrary.simpleMessage("جبل سيناء"),
         "mountSinai": MessageLookupByLibrary.simpleMessage(
             "جبل سيناء: موقع مقدس في العديد من الأديان، يُعتقد أن موسى تلقى فيه الوصايا العشر. توفر القمة مناظر خلابة، خاصة عند شروق الشمس."),
         "new_here": MessageLookupByLibrary.simpleMessage("جديد هنا؟"),
@@ -72,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "قلعة قايتباي: حصن من القرن الخامس عشر بُني على أنقاض منارة الإسكندرية القديمة، ويوفر إطلالات رائعة على البحر ونظرة على التاريخ الدفاعي للإسكندرية."),
         "removedFromFavorites":
             MessageLookupByLibrary.simpleMessage("تمت الإزالة من المفضلة"),
+        "saint": MessageLookupByLibrary.simpleMessage("دير سانت كاترين"),
         "saintCaithrine": MessageLookupByLibrary.simpleMessage(
             "دير سانت كاترين: أحد أقدم الأديرة المسيحية في العالم، يقع عند سفح جبل سيناء. يحتوي على مخطوطات وكنوز قديمة."),
         "sign_up": MessageLookupByLibrary.simpleMessage("انشاء حساب"),

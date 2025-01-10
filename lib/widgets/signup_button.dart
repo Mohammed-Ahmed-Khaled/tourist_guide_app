@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../generated/l10n.dart';
 
 class SignUpButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -15,7 +16,7 @@ class SignUpButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              AppLocalizations.of(context)!.new_here,
+              S.of(context)!.new_here,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.width * 0.05,
@@ -24,7 +25,7 @@ class SignUpButton extends StatelessWidget {
             ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.02),
             Text(
-              AppLocalizations.of(context)!.sign_up,
+              S.of(context)!.sign_up,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.width * 0.046,
