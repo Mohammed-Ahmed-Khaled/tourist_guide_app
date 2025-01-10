@@ -1,27 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:tourist_guide_app/screens/editprofile.dart';
 import 'package:tourist_guide_app/widgets/listtale_widget.dart';
-
-void main() {
-  runApp(const ProfileApp());
-}
-
-class ProfileApp extends StatelessWidget {
-  const ProfileApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Profile Page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Profile(), // Set Profile as the home
-    );
-  }
-}
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -31,71 +13,83 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  // Function to hash the phone number
-  String _hashPhoneNumber(String phoneNumber) {
-    // Convert the phone number to bytes and apply SHA-256 hashing
-    final bytes = utf8.encode(phoneNumber);
+  String fullName = "";
+  String email = "";
+  String hashedPassword = "";
+
+  @override
+  void initState() {
+    super.initState();
+    getUserData(); // Load user data from Shared Preferences
+  }
+
+  // Function to load user data from Shared Preferences
+  Future<void> getUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      fullName = prefs.getString('fullName') ?? 'No Name'; // Get full name
+      email = prefs.getString('email') ?? ''; // Get email
+      hashedPassword = prefs.getString('password') ?? ""; //get password
+      hashPassword(hashedPassword); // Hashing password
+    });
+  }
+
+  // Function to hash the phone number (can be password)
+  String hashPassword(String password) {
+    final bytes = utf8.encode(password);
     final digest = sha256.convert(bytes);
-    return digest.toString(); // Return the hashed phone number as a string
+    return digest.toString();
   }
 
   @override
   Widget build(BuildContext context) {
-    // Original phone number
-    final String phoneNumber = "+1234567890";
-    final String hashedPhoneNumber = _hashPhoneNumber(phoneNumber);
-    int _currentIndex = 3;
-
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile Page'), // AppBar title
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: Colors.white,
-          padding: const EdgeInsets.all(
-              16.0), // Add padding around the profile content
-          child: Column(children: [
-            const SizedBox(height: 2), // Space from the top
-            CircleAvatar(
-              radius: 30,
-              backgroundImage: const AssetImage(
-                  'assets/profile.png'), // Ensure this image exists
+    return SingleChildScrollView(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        padding: const EdgeInsets.all(16.0),
+        child: Column(children: [
+          const SizedBox(height: 2),
+          CircleAvatar(
+            radius: 30,
+            backgroundImage: const AssetImage('assets/profile.png'),
+          ),
+          const SizedBox(height: 8),
+          listTileFunc("Full Name", fullName, Icon(Icons.person)),
+          const SizedBox(height: 2),
+          listTileFunc("Email", email, Icon(Icons.email)),
+          const SizedBox(height: 2),
+          listTileFunc("Password", hashedPassword, Icon(Icons.password)),
+          Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const EditProfilePage()),
+                );
+              },
+              icon: Icon(Icons.edit),
+              label: Text(
+                'Edit Profile',
+                style: TextStyle(color: Colors.black),
+              ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(150, 40),
+                padding: EdgeInsets.all(15),
+                backgroundColor: const Color.fromARGB(255, 178, 62, 3),
+                iconColor: const Color.fromARGB(255, 0, 0, 0),
+              ),
             ),
-            const SizedBox(height: 8), // Space below the profile avatar
-            listTileFunc("Full Name", "Ahmad Mahmoud", Icon(Icons.person)),
-            const SizedBox(height: 2), // Space between ListTale
-            listTileFunc("Email", "Ahmad@test.com", Icon(Icons.email)),
-            const SizedBox(height: 2), // Space between ListTale
-            listTileFunc("Password", hashedPhoneNumber, Icon(Icons.password)),
-            //Elavated Button
-            Padding(
-              padding: const EdgeInsets.all(6.0),
-              child: ElevatedButton.icon(
-                  onPressed: () {
-                    //navigate to a page similar to sign up page ?
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const EditProfilePage()),
-                    );
-                  },
-                  icon: Icon(Icons.edit), // Set button icon
-                  label: Text(
-                    'Edit Profile',
-                    style: TextStyle(color: Colors.black),
-                  ), // Set button text
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(150, 40),
-                      padding: EdgeInsets.all(15),
-                      backgroundColor: const Color.fromARGB(255, 176, 65, 246),
-                      iconColor: const Color.fromARGB(255, 242, 145, 1))),
-            )
-          ]),
-        ),
+          )
+        ]),
       ),
+    );
+  }
+}
+/*
       //Bottom Navigation Bar Section
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -129,3 +123,4 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
+*/

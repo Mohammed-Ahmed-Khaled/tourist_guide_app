@@ -1,7 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class EditProfilePage extends StatelessWidget {
+class EditProfilePage extends StatefulWidget {
   const EditProfilePage({super.key});
+
+  @override
+  State<EditProfilePage> createState() => _EditProfilePageState();
+}
+
+class _EditProfilePageState extends State<EditProfilePage> {
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getUserData();
+  }
+
+  //function to get user data
+  Future<void> getUserData() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    _fullNameController.text = prefs.getString('fullName') ?? '';
+    _emailController.text = prefs.getString('email') ?? '';
+    _passwordController.text = prefs.getString('phoneNumber') ?? '';
+  }
+
+  //function to edit user data
+  Future<void> editUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('fullName', _fullNameController.text);
+    await prefs.setString('email', _emailController.text);
+    await prefs.setString('phoneNumber', _passwordController.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,24 +48,29 @@ class EditProfilePage extends StatelessWidget {
           child: Column(
             children: [
               TextField(
+                controller: _fullNameController,
                 decoration: InputDecoration(labelText: 'Full Name'),
               ),
               TextField(
+                controller: _emailController,
                 decoration: InputDecoration(labelText: 'Email'),
               ),
               TextField(
+                controller: _passwordController,
                 decoration: InputDecoration(labelText: 'Password'),
+                obscureText: true,
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
+                  onPressed: () async {
+                    await editUserData(); //update the user data
+                    Navigator.pop(context); //return to the profile page
                   },
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(150, 40),
                       padding: EdgeInsets.all(15),
-                      backgroundColor: const Color.fromARGB(255, 176, 65, 246),
-                      iconColor: const Color.fromARGB(255, 242, 145, 1)),
+                      backgroundColor: const Color.fromARGB(255, 137, 54, 3),
+                      iconColor: const Color.fromARGB(255, 0, 0, 0)),
                   child: const Text(
                     'Save',
                     style: TextStyle(color: Colors.black),
