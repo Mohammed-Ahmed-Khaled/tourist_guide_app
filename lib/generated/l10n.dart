@@ -1,6 +1,16 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
+
+// **************************************************************************
+// Generator: Flutter Intl IDE plugin
+// Made by Localizely
+// **************************************************************************
+
+// ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
+// ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
+// ignore_for_file: avoid_redundant_argument_values, avoid_escaping_inner_quotes
 
 class S {
   S();
@@ -9,7 +19,7 @@ class S {
 
   static S get current {
     assert(_current != null,
-    'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
@@ -32,7 +42,7 @@ class S {
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
     assert(instance != null,
-    'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
@@ -80,10 +90,10 @@ class S {
     );
   }
 
-  /// `Government`
+  /// `Governments`
   String get governments {
     return Intl.message(
-      'Government',
+      'Governments',
       name: 'governments',
       desc: '',
       args: [],
@@ -125,146 +135,6 @@ class S {
     return Intl.message(
       'Popular Places',
       name: 'popularPlaces',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Full Name`
-  String get fullName {
-    return Intl.message(
-      'Full Name',
-      name: 'fullName',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Email`
-  String get Email {
-    return Intl.message(
-      'Email',
-      name: 'Email',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Password`
-  String get Password {
-    return Intl.message(
-      'Password',
-      name: 'Password',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Confirm Password`
-  String get ConfirmPassword {
-    return Intl.message(
-      'Confirm Password',
-      name: 'ConfirmPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Phone Number`
-  String get Phone {
-    return Intl.message(
-      'Phone Number',
-      name: 'Phone',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Sign UP`
-  String get SignUP {
-    return Intl.message(
-      'Sign UP',
-      name: 'SignUP',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please enter your full name`
-  String get EnterName {
-    return Intl.message(
-      'Please enter your full name',
-      name: 'EnterName',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please enter your email`
-  String get EnterEmail {
-    return Intl.message(
-      'Please enter your email',
-      name: 'EnterEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please enter your password`
-  String get EnterPassword {
-    return Intl.message(
-      'Please enter your password',
-      name: 'EnterPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please confirm your password`
-  String get EnterConfirmPassword {
-    return Intl.message(
-      'Please confirm your password',
-      name: 'EnterConfirmPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `First character should be a letter`
-  String get FirstCpital {
-    return Intl.message(
-      'First character should be a letter',
-      name: 'FirstCpital',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please enter a valid email address`
-  String get ValidEmail {
-    return Intl.message(
-      'Please enter a valid email address',
-      name: 'ValidEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Password should be at least 6 characters long`
-  String get ValidPassword {
-    return Intl.message(
-      'Password should be at least 6 characters long',
-      name: 'ValidPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Passwords do not match`
-  String get PasswordsMatch {
-    return Intl.message(
-      'Passwords do not match',
-      name: 'PasswordsMatch',
       desc: '',
       args: [],
     );
@@ -400,20 +270,20 @@ class S {
     );
   }
 
-  /// `Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.`
+  /// `Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.`
   String get mountSinai {
     return Intl.message(
-      'Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.',
+      'Mount Sinai is a holy location in many religions  where Moses is said to have received the Ten Commandments. Beautiful views may be seen from the summit, particularly at dawn.',
       name: 'mountSinai',
       desc: '',
       args: [],
     );
   }
 
-  /// `Saint Catherine's Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.`
+  /// `Saint Catherine's Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.`
   String get saintCaithrine {
     return Intl.message(
-      'Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.',
+      'Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures.',
       name: 'saintCaithrine',
       desc: '',
       args: [],
@@ -435,6 +305,146 @@ class S {
     return Intl.message(
       'Valley of the Kings: A royal burial site with over 60 tombs, including Tutankhamun\'s, adorned with intricate hieroglyphs and stunning wall paintings.',
       name: 'vallleyOfKings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tourist Guide App`
+  String get tourist_guide_app {
+    return Intl.message(
+      'Tourist Guide App',
+      name: 'tourist_guide_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Here?`
+  String get new_here {
+    return Intl.message(
+      'New Here?',
+      name: 'new_here',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get sign_up {
+    return Intl.message(
+      'Sign Up',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get do_not_have_an_account {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'do_not_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter Email`
+  String get please_enter_email {
+    return Intl.message(
+      'Please Enter Email',
+      name: 'please_enter_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter Password`
+  String get please_enter_password {
+    return Intl.message(
+      'Please Enter Password',
+      name: 'please_enter_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 6 chars.`
+  String get password_must_be_at_least_6_chars {
+    return Intl.message(
+      'Password must be at least 6 chars.',
+      name: 'password_must_be_at_least_6_chars',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email or password`
+  String get invalid_email_or_password {
+    return Intl.message(
+      'Invalid email or password',
+      name: 'invalid_email_or_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Successful`
+  String get login_successful {
+    return Intl.message(
+      'Login Successful',
+      name: 'login_successful',
       desc: '',
       args: [],
     );
