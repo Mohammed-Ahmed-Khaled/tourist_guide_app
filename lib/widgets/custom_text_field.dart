@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String label;
@@ -28,51 +29,11 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: screenWidth * 0.02,
-        vertical: screenHeight * 0.01,
-      ),
-      child: TextFormField(
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        enableInteractiveSelection: true,
-        cursorColor: Theme.of(context).primaryColor,
-        decoration: InputDecoration(
-          hintStyle: const TextStyle(color: Colors.white),
-          label: Text(
-            label,
-            style:
-                TextStyle(color: Colors.white, fontSize: screenWidth * 0.045),
-          ),
-          hintText: hintText,
-          suffixIcon: suffixIcon,
-          prefixIcon: prefixIcon,
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15),
-              borderSide: BorderSide(
-                width: 3,
-                color: Theme.of(context).primaryColor,
-              )),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
-              width: 3,
-              color: Theme.of(context).primaryColor,
-            ),
-          ),
-        ),
-        keyboardType: keyboardType,
-        controller: controller,
-        obscureText: obscureText,
-        validator: validator,
-      ),
       padding: const EdgeInsets.all(10.0),
       child: isPhoneNumber
           ? InternationalPhoneNumberInput(
-              onInputChanged: (PhoneNumber number) {
-              },
+              onInputChanged: (PhoneNumber number) {},
               textFieldController: controller,
               hintText: hintText,
               formatInput: false,

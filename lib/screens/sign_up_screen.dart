@@ -23,25 +23,24 @@ class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
 
   Future<void> _savedUserData() async {
-  final prefernce = await SharedPreferences.getInstance();
-  await prefernce.setString("Name", fullName.text);
-  await prefernce.setString("Email", email.text);
-  await prefernce.setString("Password", password.text);
-  await prefernce.setString("confirmPassword", confirmPassword.text);
-  if (phoneNumber.text.isNotEmpty) {
-    await prefernce.setInt("Phone", int.parse(phoneNumber.text));
-  } else {
+    final prefernce = await SharedPreferences.getInstance();
+    await prefernce.setString("Name", fullName.text);
+    await prefernce.setString("Email", email.text);
+    await prefernce.setString("Password", password.text);
+    await prefernce.setString("confirmPassword", confirmPassword.text);
+    if (phoneNumber.text.isNotEmpty) {
+      await prefernce.setInt("Phone", int.parse(phoneNumber.text));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Phone number is empty!')),
+      );
+      return;
+    }
+
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Phone number is empty!')),
+      const SnackBar(content: Text('User data saved successfully!')),
     );
-    return;
   }
-
-  ScaffoldMessenger.of(context).showSnackBar(
-    const SnackBar(content: Text('User data saved successfully!')),
-  );
-}
-
 
   @override
   Widget build(BuildContext context) {
@@ -121,6 +120,8 @@ class _SignUpState extends State<SignUp> {
                           return S.of(context).EnterPassword;
                         } else if (!isEqual(value!, password.text)) {
                           return S.of(context).PasswordsMatch;
+                        } else {
+                          return null;
                         }
                       },
                       obscureText: confirm_password,
