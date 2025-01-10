@@ -142,11 +142,11 @@ class _SignUpState extends State<SignUp> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           _savedUserData();
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => const LoginPage()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginPage()),
+                          );
                         }
                       },
                       style: ElevatedButton.styleFrom(
