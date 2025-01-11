@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../screens/profile.dart';
+import 'profile_screen.dart';
 
 class EditProfilePage extends StatefulWidget {
   final void Function() togglelanguage;
@@ -17,7 +17,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getUserData();
   }

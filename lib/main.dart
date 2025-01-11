@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
           inputDecorationTheme: InputDecorationTheme(
             errorStyle: TextStyle(fontWeight: FontWeight.bold),
           )),
-      home: SignUp(),
+      home: SignUp(togglelanguage: toggleLanguage),
     );
   }
 }

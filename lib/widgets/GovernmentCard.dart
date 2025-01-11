@@ -1,7 +1,6 @@
-import '../models/government_model.dart';
 import 'package:flutter/material.dart';
-
-import '../screens/GovernmentDetailsScreen.dart';
+import '../models/government_model.dart';
+import '../screens/government_detail_screen.dart';
 
 class Governmentcard extends StatefulWidget {
   final GovernmentModel government;

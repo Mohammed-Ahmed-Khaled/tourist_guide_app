@@ -1,4 +1,6 @@
-import '../screens/login_page.dart';
+import '../screens/tabs_screen.dart';
+
+import 'login_screen.dart';
 import 'package:flutter/material.dart';
 import '../generated/l10n.dart';
 import '../widgets/custom_text_field.dart';
@@ -8,15 +10,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SignUp extends StatefulWidget {
   const SignUp({
     super.key,
+    required this.togglelanguage,
   });
+
+  final void Function() togglelanguage;
 
   @override
   State<SignUp> createState() => _SignUpState();
 }
 
 class _SignUpState extends State<SignUp> {
-  bool hidden_Password = true;
-  bool confirm_password = true;
+  bool hiddenPassword = true;
+  bool confirmPasswords = true;
   TextEditingController fullName = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -48,7 +53,6 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -107,10 +111,10 @@ class _SignUpState extends State<SignUp> {
                         }
                         return null;
                       },
-                      obscureText: hidden_Password,
+                      obscureText: hiddenPassword,
                       suffixIcon: IconButton(
                         onPressed: togglePassword,
-                        icon: Icon(hidden_Password
+                        icon: Icon(hiddenPassword
                             ? Icons.visibility
                             : Icons.visibility_off),
                       ),
@@ -129,10 +133,10 @@ class _SignUpState extends State<SignUp> {
                           return null;
                         }
                       },
-                      obscureText: confirm_password,
+                      obscureText: confirmPasswords,
                       suffixIcon: IconButton(
                         onPressed: toggleConfirmPassword,
-                        icon: Icon(confirm_password
+                        icon: Icon(confirmPasswords
                             ? Icons.visibility
                             : Icons.visibility_off),
                       ),
@@ -148,6 +152,14 @@ class _SignUpState extends State<SignUp> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           _savedUserData();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TabsScreen(
+                                togglelanguage: widget.togglelanguage,
+                              ),
+                            ),
+                          );
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -172,10 +184,13 @@ class _SignUpState extends State<SignUp> {
                         Text(S.of(context).alreadyHaveAccount),
                         TextButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const LoginPage()),
+                                builder: (context) => LoginPage(
+                                  togglelanguage: widget.togglelanguage,
+                                ),
+                              ),
                             );
                           },
                           child: Text(S.of(context).login),
@@ -194,13 +209,13 @@ class _SignUpState extends State<SignUp> {
 
   togglePassword() {
     setState(() {
-      hidden_Password = !hidden_Password;
+      hiddenPassword = !hiddenPassword;
     });
   }
 
   toggleConfirmPassword() {
     setState(() {
-      confirm_password = !confirm_password;
+      confirmPasswords = !confirmPasswords;
     });
   }
 

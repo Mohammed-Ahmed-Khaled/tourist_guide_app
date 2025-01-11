@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../generated/l10n.dart';
-import 'GovernmentDetailsScreen.dart';
+import 'government_detail_screen.dart';
 import '../widgets/GovernmentCard.dart';
-import '../data/governmentsData.dart';
+import '../data/governments_data.dart';
 import '../widgets/translate.dart';
 
 class GovernmentsScreen extends StatelessWidget {

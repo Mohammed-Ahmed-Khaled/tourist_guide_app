@@ -1,5 +1,6 @@
-import 'package:Tourist_guide/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
+import '../screens/tabs_screen.dart';
+import '../screens/sign_up_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../generated/l10n.dart';
 import '../widgets/background_image.dart';
@@ -9,7 +10,12 @@ import '../widgets/login_title.dart';
 import '../widgets/signup_button.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({
+    super.key,
+    required this.togglelanguage,
+  });
+
+  final void Function() togglelanguage;
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -34,6 +40,14 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       _showSnackBar(S.of(context).invalid_email_or_password, isError: true);
     }
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TabsScreen(
+          togglelanguage: widget.togglelanguage,
+        ),
+      ),
+    );
   }
 
   void _showSnackBar(String message, {bool isError = true}) {
@@ -86,10 +100,12 @@ class _LoginPageState extends State<LoginPage> {
                     Text(S.of(context).new_here),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignUp(),
+                            builder: (context) => SignUp(
+                              togglelanguage: widget.togglelanguage,
+                            ),
                           ),
                         );
                       },

@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-import '../screens/editprofile.dart';
-import '../widgets/listtale_widget.dart';
+import 'edit_profile_screen.dart';
+import '../widgets/list_tile_widget.dart';
 import '../widgets/translate.dart';
 
 class Profile extends StatefulWidget {
+  const Profile({
+    super.key,
+    required this.togglelanguage,
+  });
+
   final void Function() togglelanguage;
-  const Profile({super.key, required this.togglelanguage});
 
   @override
   State<Profile> createState() => _ProfileState();
@@ -83,9 +87,10 @@ class _ProfileState extends State<Profile> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => EditProfilePage(
-                              togglelanguage: widget.togglelanguage,
-                            )),
+                      builder: (context) => EditProfilePage(
+                        togglelanguage: widget.togglelanguage,
+                      ),
+                    ),
                   );
                 },
                 icon: Icon(Icons.edit),
@@ -107,38 +112,3 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
-/*
-      //Bottom Navigation Bar Section
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index; // Update the current index
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Governments',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        selectedItemColor: Colors.blue, // Active item color
-        unselectedItemColor: Colors.grey, // Inactive item color
-        type: BottomNavigationBarType.fixed, // Ensure all items are shown
-      ),
-    );
-  }
-}
-*/

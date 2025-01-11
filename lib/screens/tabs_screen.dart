@@ -6,11 +6,14 @@ import '../providers/favorites_provider.dart';
 import '../providers/nav_bar_provider.dart';
 import '../screens/favorites_screen.dart';
 import '../screens/places_screen.dart';
-import 'Governments.dart';
-import 'profile.dart';
+import 'governments_screen.dart';
+import 'profile_screen.dart';
 
 class TabsScreen extends ConsumerWidget {
-  const TabsScreen(this.togglelanguage, {super.key});
+  const TabsScreen({
+    super.key,
+    required this.togglelanguage,
+  });
 
   final void Function() togglelanguage;
 

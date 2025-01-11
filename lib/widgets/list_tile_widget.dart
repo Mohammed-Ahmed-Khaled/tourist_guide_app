@@ -5,13 +5,12 @@ Widget listTileFunc(String title, String subtitle, Icon leadingIcon) {
     decoration: BoxDecoration(
       color: Colors.white, // Background color for the ListTile
       border: Border.all(
-          color: const Color.fromARGB(255, 253, 106, 0)
-              .withOpacity(0.3)), // Border color and width
+          color:
+              const Color.fromARGB(255, 253, 106, 0)), // Border color and width
       borderRadius: BorderRadius.circular(8.0), // Rounded corners
       boxShadow: [
         BoxShadow(
-          color: const Color.fromARGB(255, 251, 3, 3)
-              .withOpacity(0.1), // Shadow color
+          color: const Color.fromARGB(255, 251, 3, 3), // Shadow color
           blurRadius: 5, // Shadow blur radius
           spreadRadius: 1, // Shadow spread radius
           offset: const Offset(0, 2), // Shadow position

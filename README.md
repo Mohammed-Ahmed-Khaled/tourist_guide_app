@@ -1,16 +1,32 @@
-# tour_guide_app
+# Tourist Guide App
 
-A new Flutter project.
+A mobile application for tourists visiting Egypt to explore landmarks, museums, and other attractions across different Egyptian governorates.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Signup Page**: 
+  - Input fields for Full Name, Email, Password, and Phone Number (optional).
+  - A Signup button that navigates to the Login Page.
 
-A few resources to get you started if this is your first Flutter project:
+- **Login Page**: 
+  - Input fields for Email and Password.
+  - Validates credentials and navigates to the Welcome Page upon successful login.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Home Page**: 
+  - Two sections: Suggested Places to Visit (grid view) and Popular Places (horizontally scrollable cards) using (Tab).
+  - Each card includes an image, name of the place, name of its governorate, and a toggleable favorite icon.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Governments Page**: 
+  - Displays a list of Egyptian governments.
+  - Navigates to a page showing two landmarks specific to the selected government.
+
+- **Profile Page**: 
+  - Displays user details including Full Name, Email, and Password (hashed for security).
+
+- **Favorites Page**: 
+  - Displays cards similar to the Popular Places section on the Home Page that are favored by the user.
+
+- **Bottom Navigation Bar**: 
+  - Includes icons for Home, Governments, Favorites, and Profile, visible on all main pages.
+
+
