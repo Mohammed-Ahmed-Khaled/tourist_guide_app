@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tourist_guide_app/generated/l10n.dart';
 import 'dart:convert';
 import 'edit_profile_screen.dart';
 import '../widgets/list_tile_widget.dart';
@@ -53,7 +54,7 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Profile Details",
+          S.of(context).profile_details,
           style: TextStyle(fontSize: 15),
         ),
         actions: [
@@ -97,7 +98,7 @@ class _ProfileState extends State<Profile> {
                 },
                 icon: Icon(Icons.edit),
                 label: Text(
-                  'Edit Profile',
+                  S.of(context).edit_profile,
                   style: TextStyle(color: Colors.black),
                 ),
                 style: ElevatedButton.styleFrom(

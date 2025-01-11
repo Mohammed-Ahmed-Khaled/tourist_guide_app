@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dahab": MessageLookupByLibrary.simpleMessage("دهب"),
         "do_not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "edit_profile":
+            MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "famous_landmarks":
@@ -94,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "popularPlaces":
             MessageLookupByLibrary.simpleMessage("الأماكن الشهيرة"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "profile_details": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "qaitbay": MessageLookupByLibrary.simpleMessage(
             "قلعة قايتباي: حصن من القرن الخامس عشر بُني على أنقاض منارة الإسكندرية القديمة، ويوفر إطلالات رائعة على البحر ونظرة على التاريخ الدفاعي للإسكندرية."),
         "removedFromFavorites":
@@ -101,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saint": MessageLookupByLibrary.simpleMessage("دير سانت كاترين"),
         "saintCaithrine": MessageLookupByLibrary.simpleMessage(
             "دير سانت كاترين: أحد أقدم الأديرة المسيحية في العالم، يقع عند سفح جبل سيناء. يحتوي على مخطوطات وكنوز قديمة."),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "sign_up": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "sinai": MessageLookupByLibrary.simpleMessage("سيناء"),
         "suggestedPlaces":

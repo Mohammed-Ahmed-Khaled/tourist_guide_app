@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dahab": MessageLookupByLibrary.simpleMessage("Dahab"),
         "do_not_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "famous_landmarks":
@@ -93,6 +94,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please Enter Password"),
         "popularPlaces": MessageLookupByLibrary.simpleMessage("Popular Places"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "profile_details":
+            MessageLookupByLibrary.simpleMessage("Profile Details"),
         "qaitbay": MessageLookupByLibrary.simpleMessage(
             "Citadel of Qaitbay: A 15th-century fortress built on the ruins of the ancient Lighthouse of Alexandria, offering stunning sea views and a glimpse into Alexandria’s defensive history."),
         "removedFromFavorites":
@@ -101,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Saint Catherine\'s Monastery"),
         "saintCaithrine": MessageLookupByLibrary.simpleMessage(
             "Saint Catherine\'s Monastery i one of the oldest surviving Christian monasteries in the world,  is situated at the base of Mount Sinai. It contains old manuscripts and treasures."),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "sinai": MessageLookupByLibrary.simpleMessage("Sinai"),
         "suggestedPlaces":

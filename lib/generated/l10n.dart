@@ -1,6 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -597,6 +595,36 @@ class S {
     return Intl.message(
       'Already have an account ?',
       name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Details`
+  String get profile_details {
+    return Intl.message(
+      'Profile Details',
+      name: 'profile_details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get edit_profile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'edit_profile',
       desc: '',
       args: [],
     );

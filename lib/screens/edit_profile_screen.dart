@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../generated/l10n.dart';
 import 'profile_screen.dart';
 
 class EditProfilePage extends StatefulWidget {
@@ -41,7 +42,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Edit Profile'),
+        title: Text(S.of(context).edit_profile),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -50,32 +51,33 @@ class _EditProfilePageState extends State<EditProfilePage> {
             children: [
               TextField(
                 controller: _fullNameController,
-                decoration: InputDecoration(labelText: 'Full Name'),
+                decoration: InputDecoration(labelText: S.of(context).fullName),
               ),
               TextField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: S.of(context).email),
               ),
               TextField(
                 controller: _passwordController,
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(labelText: S.of(context).password),
                 obscureText: true,
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                  onPressed: () async {
-                    await editUserData(); //update the user data
-                    Navigator.pop(context, true); //return to the profile page
-                  },
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(150, 40),
-                      padding: EdgeInsets.all(15),
-                      backgroundColor: const Color.fromARGB(255, 137, 54, 3),
-                      iconColor: const Color.fromARGB(255, 0, 0, 0)),
-                  child: const Text(
-                    'Save',
-                    style: TextStyle(color: Colors.black),
-                  )),
+                onPressed: () async {
+                  await editUserData(); //update the user data
+                  Navigator.pop(context, true); //return to the profile page
+                },
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(150, 40),
+                    padding: EdgeInsets.all(15),
+                    backgroundColor: const Color.fromARGB(255, 137, 54, 3),
+                    iconColor: const Color.fromARGB(255, 0, 0, 0)),
+                child: Text(
+                  S.of(context).save,
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
             ],
           ),
         ),

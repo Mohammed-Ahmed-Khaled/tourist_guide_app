@@ -53,5 +53,8 @@
     "arabic": "Arabic",
     "invalid_email_or_password": "Invalid email or password",
     "login_successful": "Login Successful",
-    "alreadyHaveAccount": "Already have an account ?"
+    "alreadyHaveAccount": "Already have an account ?",
+    "profile_details": "Profile Details",
+    "save": "Save",
+    "edit_profile":"Edit Profile"
 }
