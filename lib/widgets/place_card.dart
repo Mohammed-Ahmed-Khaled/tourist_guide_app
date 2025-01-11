@@ -31,13 +31,6 @@ class PlaceCard extends ConsumerWidget {
               ),
             ),
             Text(
-              "",
-              style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
               government.name,
               style: const TextStyle(
                 fontSize: 20,
