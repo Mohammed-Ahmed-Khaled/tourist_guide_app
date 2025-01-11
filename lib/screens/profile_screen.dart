@@ -55,12 +55,10 @@ class _ProfileState extends State<Profile> {
         title: Text(
           "Profile Details",
           style: TextStyle(fontSize: 15),
-          textAlign: TextAlign.center,
         ),
         actions: [
           TranslateButton(togglelanguage: widget.togglelanguage),
         ],
-        leading: Icon(Icons.person_4_sharp),
       ),
       body: SingleChildScrollView(
         child: Container(

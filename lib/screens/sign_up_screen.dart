@@ -1,11 +1,10 @@
-import '../screens/tabs_screen.dart';
-
-import 'login_screen.dart';
 import 'package:flutter/material.dart';
-import '../generated/l10n.dart';
-import '../widgets/custom_text_field.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../generated/l10n.dart';
+import '../widgets/custom_text_field.dart';
+import '../screens/tabs_screen.dart';
+import '../screens/login_screen.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({
@@ -28,6 +27,27 @@ class _SignUpState extends State<SignUp> {
   TextEditingController confirmPassword = TextEditingController();
   TextEditingController phoneNumber = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  @override
+  void initState() {
+    super.initState();
+    _checkIfUserLoggedIn();
+  }
+
+  Future<void> _checkIfUserLoggedIn() async {
+    final preferences = await SharedPreferences.getInstance();
+    final String? savedEmail = preferences.getString("Email");
+
+    if (savedEmail != null && savedEmail.isNotEmpty) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => TabsScreen(
+            togglelanguage: widget.togglelanguage,
+          ),
+        ),
+      );
+    }
+  }
 
   Future<void> _savedUserData() async {
     final prefernce = await SharedPreferences.getInstance();
