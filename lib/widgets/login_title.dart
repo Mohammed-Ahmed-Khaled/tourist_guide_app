@@ -8,7 +8,7 @@ class LoginTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        S.of(context)!.login,
+        S.of(context).login,
         style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.white,

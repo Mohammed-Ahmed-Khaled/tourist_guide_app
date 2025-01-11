@@ -1,3 +1,4 @@
+import 'package:Tourist_guide/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../generated/l10n.dart';
@@ -28,12 +29,10 @@ class _LoginPageState extends State<LoginPage> {
 
     if (_emailController.text == savedEmail &&
         _passwordController.text == savedPassword) {
-      _showSnackBar(S.of(context)!.login_successful,
-          isError: false);
+      _showSnackBar(S.of(context).login_successful, isError: false);
       // Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomePage()));
     } else {
-      _showSnackBar(S.of(context)!.invalid_email_or_password,
-          isError: true);
+      _showSnackBar(S.of(context).invalid_email_or_password, isError: true);
     }
   }
 
@@ -41,9 +40,7 @@ class _LoginPageState extends State<LoginPage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        backgroundColor: isError
-            ? Colors.red.withOpacity(0.6)
-            : Colors.green.withOpacity(0.6),
+        backgroundColor: isError ? Colors.red : Colors.green,
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         duration: const Duration(seconds: 1),
@@ -83,10 +80,22 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: screenHeight * 0.05),
                 LoginButton(onPressed: _loginUser),
                 SizedBox(height: screenHeight * 0.02),
-                SignUpButton(
-                  onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
-                  },
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(S.of(context).new_here),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUp(),
+                          ),
+                        );
+                      },
+                      child: Text(S.of(context).sign_up),
+                    ),
+                  ],
                 ),
               ],
             ),

@@ -1,4 +1,4 @@
-import 'package:Tourist_guide/models/government_model.dart';
+import '../models/government_model.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/GovernmentDetailsScreen.dart';

@@ -56,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alexLibrary": MessageLookupByLibrary.simpleMessage(
             "مكتبة الإسكندرية: إحياء حديث للمكتبة القديمة في الإسكندرية، وتُعد مركزًا ثقافيًا يضم ملايين الكتب والمعارض الفنية وعروض القبة السماوية."),
         "alexandria": MessageLookupByLibrary.simpleMessage("الإسكندرية"),
+        "alreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل ؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "dahab": MessageLookupByLibrary.simpleMessage("دهب"),
         "do_not_have_an_account":

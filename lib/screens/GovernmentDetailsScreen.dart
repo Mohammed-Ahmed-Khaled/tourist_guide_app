@@ -1,5 +1,5 @@
-import 'package:Tourist_guide/models/government_model.dart';
-import 'package:Tourist_guide/widgets/translate.dart';
+import '../models/government_model.dart';
+import '../widgets/translate.dart';
 import 'package:flutter/material.dart';
 import '../widgets/GovernmentCard.dart';
 

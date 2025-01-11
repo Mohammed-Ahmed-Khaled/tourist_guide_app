@@ -52,5 +52,6 @@
   "english": "الإنجليزية",
   "arabic": "العربية",
   "invalid_email_or_password": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
-  "login_successful": "تم تسجيل الدخول بنجاح"
+  "login_successful": "تم تسجيل الدخول بنجاح",
+  "alreadyHaveAccount": "لديك حساب بالفعل ؟"
 }

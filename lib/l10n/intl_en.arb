@@ -52,5 +52,6 @@
     "english": "English",
     "arabic": "Arabic",
     "invalid_email_or_password": "Invalid email or password",
-    "login_successful": "Login Successful"
+    "login_successful": "Login Successful",
+    "alreadyHaveAccount": "Already have an account ?"
 }

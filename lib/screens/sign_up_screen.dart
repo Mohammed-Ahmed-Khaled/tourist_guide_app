@@ -1,3 +1,4 @@
+import '../screens/login_page.dart';
 import 'package:flutter/material.dart';
 import '../generated/l10n.dart';
 import '../widgets/custom_text_field.dart';
@@ -5,8 +6,9 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignUp extends StatefulWidget {
-  const SignUp({super.key, required this.title});
-  final String title;
+  const SignUp({
+    super.key,
+  });
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -75,6 +77,7 @@ class _SignUpState extends State<SignUp> {
                         } else if (!isFirstCharacter(value!)) {
                           return S.of(context).FirstCpital;
                         }
+                        return null;
                       },
                     ),
                     SizedBox(height: screenHeight * 0.02),
@@ -88,6 +91,7 @@ class _SignUpState extends State<SignUp> {
                         } else if (!value!.contains('@')) {
                           return S.of(context).ValidEmail;
                         }
+                        return null;
                       },
                     ),
                     SizedBox(height: screenHeight * 0.02),
@@ -101,6 +105,7 @@ class _SignUpState extends State<SignUp> {
                         } else if (value!.length < 6) {
                           return S.of(context).ValidPassword;
                         }
+                        return null;
                       },
                       obscureText: hidden_Password,
                       suffixIcon: IconButton(
@@ -143,11 +148,6 @@ class _SignUpState extends State<SignUp> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           _savedUserData();
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => const LoginPage()),
-                          // );
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -165,6 +165,22 @@ class _SignUpState extends State<SignUp> {
                           fontSize: screenWidth * 0.045,
                         ),
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(S.of(context).alreadyHaveAccount),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginPage()),
+                            );
+                          },
+                          child: Text(S.of(context).login),
+                        ),
+                      ],
                     ),
                   ],
                 ),
