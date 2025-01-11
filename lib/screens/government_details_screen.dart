@@ -81,12 +81,16 @@ class _GovernmentdetailsScreenState extends State<GovernmentdetailsScreen> {
                   children: [
                     Text(
                       landmark['landmarkName'],
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 21),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 21,
+                      ),
                     ),
                     SizedBox(height: 10),
                     Image.network(
                       landmark['landmarkImage'],
+                      width: double.infinity,
+                      fit: BoxFit.cover,
                       // width: MediaQuery.of(context).size.width * 0.8,
                     ),
                   ],
