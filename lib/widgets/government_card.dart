@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_guide_app/data/data.dart';
 import 'package:tourist_guide_app/models/governments_model.dart';
-import 'package:tourist_guide_app/screens/government_deatils_screen.dart';
+import 'package:tourist_guide_app/screens/government_details_screen.dart';
 
 class GovernmentCard extends StatefulWidget {
   const GovernmentCard({

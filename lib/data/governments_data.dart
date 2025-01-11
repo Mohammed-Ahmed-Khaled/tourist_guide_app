@@ -15,7 +15,7 @@ List<GovernmentModel> governments = [
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
-          "landmarkName": "dahab",
+          "landmarkName": "AAA",
           "landmarkImage":
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         }
@@ -28,12 +28,12 @@ List<GovernmentModel> governments = [
       about: "aboutAlexandria",
       landmarks: [
         {
-          "landmarkName": "Dahab",
+          "landmarkName": "BBB",
           "landmarkImage":
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
-          "landmarkName": "name",
+          "landmarkName": "CCC",
           "landmarkImage":
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         }
@@ -46,12 +46,12 @@ List<GovernmentModel> governments = [
       about: "Capital of Egypt",
       landmarks: [
         {
-          "landmarkName": "Dahab",
+          "landmarkName": "DDD",
           "landmarkImage":
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
-          "landmarkName": "name",
+          "landmarkName": "EEE",
           "landmarkImage":
               "https://images.pexels.com/photos/30107330/pexels-photo-30107330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         }

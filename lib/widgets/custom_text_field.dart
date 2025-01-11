@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
+// ignore: must_be_immutable
 class CustomTextFormField extends StatelessWidget {
   String label;
   TextInputType keyboardType;

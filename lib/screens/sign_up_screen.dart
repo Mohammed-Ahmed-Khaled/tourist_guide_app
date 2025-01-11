@@ -73,6 +73,8 @@ class _SignUpState extends State<SignUp> {
                           return S.of(context).EnterName;
                         } else if (!isFirstCharacter(value!)) {
                           return S.of(context).FirstCpital;
+                        } else {
+                          return null;
                         }
                       },
                     ),
@@ -86,6 +88,8 @@ class _SignUpState extends State<SignUp> {
                           return S.of(context).EnterEmail;
                         } else if (!value!.contains('@')) {
                           return S.of(context).ValidEmail;
+                        } else {
+                          return null;
                         }
                       },
                     ),
@@ -99,6 +103,8 @@ class _SignUpState extends State<SignUp> {
                           return S.of(context).EnterPassword;
                         } else if (value!.length < 6) {
                           return S.of(context).ValidPassword;
+                        } else {
+                          return null;
                         }
                       },
                       obscureText: hidden_Password,
@@ -119,6 +125,8 @@ class _SignUpState extends State<SignUp> {
                           return S.of(context).EnterPassword;
                         } else if (!isEqual(value!, password.text)) {
                           return S.of(context).PasswordsMatch;
+                        } else {
+                          return null;
                         }
                       },
                       obscureText: confirm_password,

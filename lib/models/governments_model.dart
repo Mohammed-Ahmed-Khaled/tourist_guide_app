@@ -3,7 +3,7 @@ class GovernmentModel {
   final String name;
   final String imgUrl;
   final String about;
-  final List<Map> landmarks;
+  final List<Map<String, dynamic>> landmarks;
 
   GovernmentModel({
     required this.id,
