@@ -26,15 +26,8 @@ class PlaceCard extends ConsumerWidget {
           children: [
             Expanded(
               child: Image.network(
-                government.landmarkImage,
+                government.imgUrl,
                 fit: BoxFit.fitWidth,
-              ),
-            ),
-            Text(
-              government.landmarkName,
-              style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
               ),
             ),
             Text(

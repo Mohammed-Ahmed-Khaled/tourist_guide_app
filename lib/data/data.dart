@@ -1,4 +1,4 @@
-import '../models/place_model.dart';
+import '../models/government_model.dart';
 
 List<GovernmentModel> governments = [
   GovernmentModel(

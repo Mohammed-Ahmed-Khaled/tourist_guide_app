@@ -58,7 +58,7 @@ class _GovernmentDetailsScreenState extends State<GovernmentDetailsScreen> {
           ),
         ),
         Padding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(12),
             child: ListView.builder(
                 shrinkWrap: true,
                 itemCount: widget.government.landmarks.length,
@@ -75,8 +75,9 @@ class _GovernmentDetailsScreenState extends State<GovernmentDetailsScreen> {
                       SizedBox(height: 10),
                       Image.network(
                         landmark['landmarkImage'],
-                        // width: MediaQuery.of(context).size.width * 0.8,
-                      )
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
                     ],
                   );
                 }))

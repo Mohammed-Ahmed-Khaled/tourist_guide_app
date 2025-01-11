@@ -3,7 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../screens/profile.dart';
 
 class EditProfilePage extends StatefulWidget {
-  const EditProfilePage({super.key});
+  final void Function() togglelanguage;
+  const EditProfilePage({super.key, required this.togglelanguage});
 
   @override
   State<EditProfilePage> createState() => _EditProfilePageState();
@@ -67,7 +68,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     await editUserData(); //update the user data
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const Profile()),
+                      MaterialPageRoute(
+                          builder: (context) => Profile(
+                                togglelanguage: widget.togglelanguage,
+                              )),
                     ); //return to the profile page
                   },
                   style: ElevatedButton.styleFrom(

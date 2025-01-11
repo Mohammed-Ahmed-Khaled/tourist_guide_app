@@ -4,9 +4,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import '../screens/editprofile.dart';
 import '../widgets/listtale_widget.dart';
+import '../widgets/translate.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({super.key});
+  final void Function() togglelanguage;
+  const Profile({super.key, required this.togglelanguage});
 
   @override
   State<Profile> createState() => _ProfileState();
@@ -51,6 +53,9 @@ class _ProfileState extends State<Profile> {
           style: TextStyle(fontSize: 15),
           textAlign: TextAlign.center,
         ),
+        actions: [
+          TranslateButton(togglelanguage: widget.togglelanguage),
+        ],
         leading: Icon(Icons.person_4_sharp),
       ),
       body: SingleChildScrollView(
@@ -78,7 +83,9 @@ class _ProfileState extends State<Profile> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const EditProfilePage()),
+                        builder: (context) => EditProfilePage(
+                              togglelanguage: widget.togglelanguage,
+                            )),
                   );
                 },
                 icon: Icon(Icons.edit),

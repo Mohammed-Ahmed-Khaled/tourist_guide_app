@@ -7,6 +7,7 @@ import '../providers/nav_bar_provider.dart';
 import '../screens/favorites_screen.dart';
 import '../screens/places_screen.dart';
 import 'Governments.dart';
+import 'profile.dart';
 
 class TabsScreen extends ConsumerWidget {
   const TabsScreen(this.togglelanguage, {super.key});
@@ -36,7 +37,7 @@ class TabsScreen extends ConsumerWidget {
           togglelanguage: togglelanguage,
         );
       } else {
-        activeScreen = PlacesScreen(
+        activeScreen = Profile(
           togglelanguage: togglelanguage,
         );
       }
@@ -47,8 +48,8 @@ class TabsScreen extends ConsumerWidget {
       body: activePage(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPageIndex,
-        selectedItemColor: Colors.teal,
-        unselectedItemColor: Colors.black,
+        selectedItemColor: Color(0XFF50B3C8),
+        unselectedItemColor: Color(0XFF332E28),
         selectedFontSize: 15,
         unselectedFontSize: 10,
         onTap: ref.read(navBarProvider.notifier).selectPage,

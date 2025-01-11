@@ -30,9 +30,9 @@ class _PlacesScreenState extends State<PlacesScreen> {
               TranslateButton(togglelanguage: widget.togglelanguage),
             ],
             bottom: TabBar(
-              labelColor: Colors.white,
+              labelColor: Color(0XFF50B3C8),
               unselectedLabelColor: Colors.black,
-              indicatorColor: Colors.black,
+              indicatorColor: Color(0XFF50B3C8),
               tabs: [
                 Tab(
                   text: S.of(context).suggestedPlaces,

@@ -1,3 +1,4 @@
+import 'package:Tourist_guide/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -40,13 +41,21 @@ class _MyAppState extends State<MyApp> {
       locale: _currentLocale,
       theme: ThemeData(
           fontFamily: 'Lora',
-          primaryColor: const Color.fromARGB(255, 111, 66, 50),
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
+          appBarTheme: AppBarTheme(
+              centerTitle: true,
+              titleTextStyle: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color(0XFF332E28),
+              ),
+              backgroundColor: Color(0xffF0D7A9)),
           useMaterial3: true,
           inputDecorationTheme: InputDecorationTheme(
             errorStyle: TextStyle(fontWeight: FontWeight.bold),
           )),
-      home: SignUp(title: 'Sign Up Page'),
+      home: SignUp(
+        title: 'Tourist Guide App',
+      ),
     );
   }
 }
