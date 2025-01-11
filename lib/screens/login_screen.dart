@@ -71,7 +71,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: Stack(
         children: [
@@ -112,6 +111,38 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(S.of(context).sign_up),
                     ),
                   ],
+                ),
+                SizedBox(height: screenHeight * 0.02),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.02),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.015,
+                        horizontal: MediaQuery.of(context).size.width * 0.1,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TabsScreen(
+                            togglelanguage: widget.togglelanguage,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      S.of(context).continueasguest,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),

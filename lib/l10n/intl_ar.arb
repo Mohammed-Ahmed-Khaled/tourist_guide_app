@@ -56,6 +56,7 @@
   "alreadyHaveAccount": "لديك حساب بالفعل ؟",
   "profile_details": "الملف الشخصي",
   "save": "حفظ",
-  "edit_profile": "تعديل الملف الشخصي"
+  "edit_profile": "تعديل الملف الشخصي",
+  "continueasguest": "استمر كضيف"
 
 }

@@ -56,5 +56,6 @@
     "alreadyHaveAccount": "Already have an account ?",
     "profile_details": "Profile Details",
     "save": "Save",
-    "edit_profile":"Edit Profile"
+    "edit_profile":"Edit Profile",
+    "continueasguest": "Continue as Guest"
 }

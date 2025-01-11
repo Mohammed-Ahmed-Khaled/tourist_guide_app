@@ -59,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل ؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "continueasguest": MessageLookupByLibrary.simpleMessage("استمر كضيف"),
         "dahab": MessageLookupByLibrary.simpleMessage("دهب"),
         "do_not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),

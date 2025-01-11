@@ -217,6 +217,34 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ],
                     ),
+                    SizedBox(height: screenHeight * 0.02),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TabsScreen(
+                              togglelanguage: widget.togglelanguage,
+                            ),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          vertical: screenHeight * 0.02,
+                          horizontal: screenWidth * 0.1,
+                        ),
+                        backgroundColor: Color.fromARGB(255, 101, 48, 20),
+                      ),
+                      child: Text(
+                        S.of(context).continueasguest,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: screenWidth * 0.045,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

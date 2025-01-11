@@ -629,6 +629,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Continue as Guest`
+  String get continueasguest {
+    return Intl.message(
+      'Continue as Guest',
+      name: 'continueasguest',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
