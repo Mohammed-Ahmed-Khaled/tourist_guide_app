@@ -34,9 +34,9 @@ class _ProfileState extends State<Profile> {
   Future<void> getUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      fullName = prefs.getString('fullName') ?? 'No Name'; // Get full name
-      email = prefs.getString('email') ?? ''; // Get email
-      password = prefs.getString('password') ?? ""; //get password
+      fullName = prefs.getString('Name') ?? 'No Name'; // Get full name
+      email = prefs.getString('Email') ?? ''; // Get email
+      password = prefs.getString('Password') ?? ""; //get password
       hashedPassword = hashPassword(password); // Hashing password
     });
   }
@@ -72,7 +72,7 @@ class _ProfileState extends State<Profile> {
             const SizedBox(height: 2),
             CircleAvatar(
               radius: 30,
-              backgroundImage: const AssetImage('assets/profile.png'),
+              backgroundImage: const AssetImage('assets/images/profile.png'),
             ),
             const SizedBox(height: 8),
             listTileFunc("Full Name", fullName, Icon(Icons.person)),
@@ -83,8 +83,8 @@ class _ProfileState extends State<Profile> {
             Padding(
               padding: const EdgeInsets.all(6.0),
               child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
+                onPressed: () async {
+                  final result = await Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => EditProfilePage(
@@ -92,6 +92,10 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                   );
+                  if (result == true) {
+                    // Refresh user data when returning from EditProfilePage
+                    getUserData();
+                  }
                 },
                 icon: Icon(Icons.edit),
                 label: Text(

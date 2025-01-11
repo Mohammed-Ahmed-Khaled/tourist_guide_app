@@ -24,17 +24,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
   //function to get user data
   Future<void> getUserData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    _fullNameController.text = prefs.getString('fullName') ?? '';
-    _emailController.text = prefs.getString('email') ?? '';
-    _passwordController.text = prefs.getString('password') ?? '';
+    _fullNameController.text = prefs.getString('Name') ?? '';
+    _emailController.text = prefs.getString('Email') ?? '';
+    _passwordController.text = prefs.getString('Password') ?? '';
   }
 
   //function to edit user data
   Future<void> editUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('fullName', _fullNameController.text);
-    await prefs.setString('email', _emailController.text);
-    await prefs.setString('password', _passwordController.text);
+    await prefs.setString('Name', _fullNameController.text);
+    await prefs.setString('Email', _emailController.text);
+    await prefs.setString('Password', _passwordController.text);
   }
 
   @override
@@ -65,13 +65,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               ElevatedButton(
                   onPressed: () async {
                     await editUserData(); //update the user data
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Profile(
-                                togglelanguage: widget.togglelanguage,
-                              )),
-                    ); //return to the profile page
+                    Navigator.pop(context, true); //return to the profile page
                   },
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(150, 40),
